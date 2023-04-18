@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "Noto";
+  src: url("font/NotoSans-Regular.ttf") format("truetype");
+  font-family: "Noto-Bold";
+  src: url("font/NotoSans-Bold.ttf") format("truetype");
+}
+:root {
+  --primary-color: #212e53;
+  --second-color: #4a919e;
+  --error-color: #f14040;
+  --titre: "Noto-Bold";
+  --text: "Noto";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--titre);
+  color: var(--second-color);
+}
+
+body {
+  background-color: rgb(46, 46, 46);
+  display: flex;
+  place-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+body .container {
+  width: 32%;
+  height: auto;
+  margin-top: 20px;
+}
+body .container .block1 {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+body .container .block1 .formu {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+}
+body .container .block1 .formu .titre {
+  width: 95%;
+  margin: auto;
+  margin-top: 20px;
+}
+body .container .block1 .formu .titre h1 {
+  width: 92%;
+  margin: auto;
+  font-family: var(--titre);
+  font-size: clamp(1.4em, 2vw, 1.7em);
+  color: var(--primary-color);
+  padding-bottom: 30px;
+}
+body .container .block1 .formu .form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  width: 95%;
+}
+body .container .block1 .formu .form .inputBox {
+  position: relative;
+  height: 50px;
+}
+body .container .block1 .formu .form .inputBox select {
+  width: 100%;
+  margin-top: -5px;
+  border: none;
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--second-color);
+  font-size: 1em;
+  font-weight: 500;
+  outline: none;
+}
+body .container .block1 .formu .form .inputBox select:focus {
+  border: none;
+  border-bottom: 3px solid var(--primary-color);
+}
+body .container .block1 .formu .form .inputBox option {
+  color: var(--primary-color);
+  font-size: 0.85em;
+  padding: 0;
+}
+body .container .block1 .formu .form .inputBox input {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background: transparent;
+}
+body .container .block1 .formu .form .inputBox input:focus ~ span {
+  transform: translateY(-20px);
+  font-size: 0.8em;
+}
+body .container .block1 .formu .form .inputBox .lab {
+  width: 100%;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 1em;
+  font-weight: 500;
+  outline: none;
+}
+body .container .block1 .formu .form .inputBox .lab:focus {
+  border: none;
+  border-bottom: 3px solid var(--primary-color);
+}
+body .container .block1 .formu .form .inputBox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  display: inline-block;
+  transition: 0.3s;
+  pointer-events: none;
+}
+body .container .block1 .formu .form .input-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 42%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+body .container .block1 .formu .form .input-wrap2 {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+body .container .block1 .formu .form .input-wrap2 input[type=text] {
+  text-transform: lowercase;
+}
+body .container .block1 .formu .form .mess {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: -25px;
+}
+body .container .block1 .formu .form .mess span {
+  padding-bottom: 5px;
+}
+body .container .block1 .formu .form .mess textarea {
+  resize: initial;
+}
+body .container .block1 .formu .form .mess textarea::-webkit-scrollbar {
+  width: 0;
+}
+body .container .block1 .formu .form .mess .messa {
+  width: 100%;
+  padding: 5px 5px;
+  border: none;
+  border: 3px solid var(--primary-color);
+  border-radius: 5px;
+  color: #2d407f;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-transform: capitalize;
+  outline: none;
+  height: 100px;
+}
+body .container .block1 .formu .form .rgpd {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 92%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+body .container .block1 .formu .form .rgpd .checkboxtext {
+  font-family: var(--titre);
+  font-size: 0.8em;
+  color: var(--primary-color);
+  -webkit-padding-start: 10px;
+          padding-inline-start: 10px;
+}
+body .container .block1 .formu .form .rgpd input[type=checkbox] {
+  display: grid;
+  place-content: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  font-size: 1em;
+  color: var(--second-color);
+  width: 1.15em;
+  height: 1.15em;
+  border: 2.5px solid var(--second-color);
+  border-radius: 5px;
+}
+body .container .block1 .formu .form .rgpd input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+body .container .block1 .formu .form .rgpd input[type=checkbox]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 0.2s;
+  box-shadow: inset 1em 1em var(--primary-color);
+}
+body .container .block1 .formu .form .but {
+  width: 92%;
+  margin: auto;
+  padding-bottom: 30px;
+}
+body .container .block1 .formu .form .but .button {
+  width: 100%;
+  font-size: 1em;
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  margin-top: 0px;
+  padding: 15px 0px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.15s;
+}
+body .container .block1 .formu .adaptatifTextarea {
+  height: 100px;
+}
+body .container .block1 .formu .holder {
+  font-size: clamp(0.9em, 2vw, 1em);
+}
+body .container .block1 .formu .small {
+  position: absolute;
+  top: 30px;
+  font-size: 0.75em;
+  color: var(--error-color);
+  visibility: hidden;
+}
+body .container .block1 .formu .small4 {
+  top: 21px;
+}
+body .container .block1 .formu .small5 {
+  top: 20px;
+}
+body .container .block1 .formu .input-active {
+  transform: translateY(-20px);
+  font-size: 0.8em;
+}
+body .container .block1 .formu .active {
+  visibility: visible;
+}
+body .container .block1 .formu .animation {
+  animation: shakeX;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+body .container .block1 .formu .padding {
+  height: 50px;
+}
+body .container .block1 .formu .scale {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */
