@@ -13,57 +13,55 @@
 
 <body>
   <div class="container" id="container">
-    <div class="block1">
-      <form  id="form" class="formu" method="post" action="config.php">
+    <div class="under-container">
+      <form  id="form" method="post" action="config.php">
         <div class="titre">
           <h1>Contact</h1>
         </div>
-        <div class="form">
+        <div class="formulaire">
           <div class="input-wrap inputBox">
             <label for="surname"></label>
-            <input class="lab" type="text" id="surname" name="surname" />
-            <span class="holder">Surname</span>
-            <small class="small small1">Error message</small>
+            <input type="text" id="surname" name="surname" />
+            <span class="placeholder">Surname</span>
+            <small class="small1">Error message</small>
           </div>
           <div class="input-wrap inputBox">
             <label for="name"></label>
-            <input class="lab" type="text" id="name" name="name" />
-            <span class="holder">Name</span>
-            <small class="small small2">Error message</small>
+            <input type="text" id="name" name="name" />
+            <span class="placeholder">Name</span>
+            <small class="small2">Error message</small>
           </div>
           <div class="input-wrap2 inputBox">
             <label for="email"></label>
-            <input class="lab" type="text" id="email" name="email" />
-            <span class="holder">Email</span>
-            <small class="small small3">Error message</small>
+            <input type="text" id="email" name="email" />
+            <span class="placeholder">Email</span>
+            <small class="small3">Error message</small>
           </div>
-
-
           <div class="input-wrap2 inputBox">
-            <select name="subject" id="subject">
+            <select name="select" id="select">
               <option class="option" value="choose">-- Choose a subject --</option>
               <option value="subject1">Subject 1</option>
               <option value="subject2">Subject 2</option>
               <option value="subject3">Subject 3</option>
             </select>
-            <small class="small small4">Error message</small>
+            <small class="small4">Error message</small>
           </div>
 
-          <div class="mess">
+          <div class="message">
             <label for="message"></label>
             <span>Message</span>
-            <textarea maxlength="1500" class="messa" name="message" id="message"></textarea>
+            <textarea maxlength="1500" name="message" id="message"></textarea>
           </div>
 
           <div class="rgpd">
             <input type="checkbox" id="checkbox" name="checkbox" value="check" />
-            <span class="checkboxtext">
+            <span>
               I agree to the terms and conditions</span>
             <small class="small small5">Error message</small>
           </div>
 
-          <div class="but">
-            <button class="button" type="submit" id="submit-sign" name="submit">
+          <div class="button">
+            <button type="submit" id="submit-sign" name="submit">
               Submit
             </button>
           </div>

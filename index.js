@@ -3,14 +3,14 @@ const form = document.querySelector("#form");
 const name = document.querySelector("#name");
 const surname = document.querySelector("#surname");
 const email = document.querySelector("#email");
-const subject = document.querySelector("#subject");
+const subject = document.querySelector("#select");
 const checkbox = document.querySelector("#checkbox");
 const select = document.querySelector("select");
 const button = document.querySelector("button");
 
 //Déclarations Messages d'erreurs
 const [small1, small2, small3, small4, small5] =
-  document.querySelectorAll(".small");
+  document.querySelectorAll("small");
 
 //Déclaration Input
 const inputs = document.querySelectorAll("input");
@@ -28,7 +28,7 @@ button.addEventListener('click', () =>{
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
     const inputValue = input.value.trim();
-    const placeholder = input.parentElement.querySelector(".holder");
+    const placeholder = input.parentElement.querySelector(".placholder");
     if (inputValue !== "") {
       placeholder.classList.add("input-active");
     } else {
