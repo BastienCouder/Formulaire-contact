@@ -83,10 +83,16 @@ function form_verify() {
     small1.classList.add("active");
     setError(surname, message);
   } else {
+    let letter = surnameValue.length;
+    if (letter < 3) {
+      let message = "*must know at least three characters";
+      small1.classList.add("active");
+      setError(surname, message);
+    } else {
       setSuccess(surname);
       small1.classList.remove("active");
     }
-  
+  }
 
   //Name
   /*----------------------------------*/
@@ -99,10 +105,16 @@ function form_verify() {
     small2.classList.add("active");
     setError(name, message);
   } else {
+    let letter = nameValue.length;
+    if (letter < 3) {
+      let message = "*must know at least three characters";
+      small2.classList.add("active");
+      setError(name, message);
+    } else {
       setSuccess(name);
       small2.classList.remove("active");
     }
-  
+  }
 
   //Email
   /*----------------------------------*/
@@ -173,7 +185,7 @@ function setError2(elem, message) {
     small.classList.remove("animation");
   }, 1000);
 }
-
+ 
 function setSuccess2(elem) {
   const formControl = elem.parentElement;
   formControl.className = "inputBox input-wrap2";
@@ -203,6 +215,6 @@ function name_verify(name) {
 }
 
 function email_verify(email) {
-  return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-zA-Z]{2,4}$/.test(email);
+  return /^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/.test(email);
 }
 

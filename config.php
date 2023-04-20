@@ -29,7 +29,6 @@ if(isset($_POST['submit'])){
     $surname = $_POST['surname'];
     $name = $_POST['name'];
     $email = $_POST['email'];
-
     $message = $_POST['message'];
 
     
